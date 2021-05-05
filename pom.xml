@@ -1,8 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xmlns="http://maven.apache.org/POM/4.0.0"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   
     <modelVersion>4.0.0</modelVersion>
 
@@ -14,7 +10,7 @@
     <packaging>jar</packaging>
 
     <properties>
-        <version.wildfly.swarm>2018.5.0</version.wildfly.swarm>
+        <version.wildfly.swarm>2.3.0.Final</version.wildfly.swarm>
         <version.maven.resources.plugin>3.0.2</version.maven.resources.plugin>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
@@ -75,8 +71,8 @@
                     </executions>
                 </plugin>
                 <plugin>
-                    <groupId>org.wildfly.swarm</groupId>
-                    <artifactId>wildfly-swarm-plugin</artifactId>
+                    <groupId>io.thorntail</groupId>
+                    <artifactId>thorntail-maven-plugin</artifactId>
                     <version>${version.wildfly.swarm}</version>
                     <executions>
                         <execution>
@@ -91,8 +87,8 @@
         </pluginManagement>
         <plugins>
             <plugin>
-                <groupId>org.wildfly.swarm</groupId>
-                <artifactId>wildfly-swarm-plugin</artifactId>
+                <groupId>io.thorntail</groupId>
+                <artifactId>thorntail-maven-plugin</artifactId>
                 <configuration>
                     <mainClass>org.i5y.keycloak.Main</mainClass>
                 </configuration>
@@ -113,7 +109,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>org.wildfly.swarm</groupId>
+            <groupId>io.thorntail</groupId>
             <artifactId>keycloak-server</artifactId>
             <version>${version.wildfly.swarm}</version>
         </dependency>
